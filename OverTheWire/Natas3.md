@@ -10,14 +10,14 @@
 
 This looks familiar
 
-![Screenshot of challenge text](/Assets/Natas3.png)
+![Screenshot of challenge text](/Assets/natas3.png)
 
 ---
 
 ## Step 2: Exploit / Solution
 Did they just copy the source code from the last challenge? Actually, that's a good thought. What does the source code show here?
 
-![Screenshot of source code](/Assets/Natas3_source.png)
+![Screenshot of source code](/Assets/natas3_source.png)
 
 Well, this is interesting. So there doesn't appear to be a direct object reference for an image or the like, but there is a comment:
 
@@ -27,11 +27,11 @@ To provide some background, every site should contain a file titled "robots.txt"
 
 With that in mind, let's take a look at the robots.txt file to see if there is any useful information:
 
-![Screenshot of robots.txt file](/Assets/Natas3_robots.png)
+![Screenshot of robots.txt file](/Assets/natas3_robots.png)
 
 As I mentioned above, robots.txt tells the search engine which pages to ignore indexing. This is typically because, well, the page needs to be hidden for some reason. It could be an admin or other login portal, and with the right security measures in place we still won't be able to get through. But let's take a look anyway:
 
-![Screenshot of robots.txt file](/Assets/Natas3_secret.png)
+![Screenshot of robots.txt file](/Assets/natas3_secret.png)
 
 It looks like there is another users file. Open that file to get the password for the next level.
 
@@ -46,4 +46,4 @@ It looks like there is another users file. Open that file to get the password fo
 
 ## References
 - [Link to the challenge](https://overthewire.org/wargames/natas/natas3.html) (if public)  
-- ![Robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+- [Robots.txt Reference](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
