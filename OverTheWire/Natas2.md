@@ -49,8 +49,7 @@ That was a windy, twisty path. But it was a fun one. Now we have our next passwo
 ---
 
 ## Step 3: Lessons Learned
-- Source code is complex. So is access control. There is no reason I should have been able to access that file, much less the directory.
-- When we publish apps to the public, we have to ensure all necessary restrictions are in place. Access control can prohibit a normal user from performing or even viewing administrative tasks.  
+- Don’t rely on obscurity — sensitive files and directories must never be exposed through predictable or accessible paths.  
 
 ---
 
