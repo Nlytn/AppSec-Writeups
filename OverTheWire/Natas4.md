@@ -38,7 +38,7 @@ Wow, that actually worked! That was a fun challenge; I'm curious to see how the 
 ---
 
 ## Step 3: Lessons Learned
-- Proper header control is essential.   
+- Never trust client-controlled data, such as HTTP headers, for authentication or access control decisions, as they can be easily manipulated.   
 - Request interception/manipulation  
 
 
