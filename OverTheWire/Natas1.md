@@ -10,7 +10,7 @@
 
 This challenge is similar to the last one. But wait...no. NO! Right click has been...blocked?! What will we do now?
 
-![Screenshot of challenge text](assets/Natas1.png)
+![Screenshot of challenge text](/Assets/Natas1.png)
 
 ---
 
@@ -18,7 +18,7 @@ This challenge is similar to the last one. But wait...no. NO! Right click has be
 
 I'm not sure how to approach this. My most important tool, my mouse, has been taken from me. Everyone knows a hacker is useless with only a keyboard! Okay, whatever. Can I at least press F12? Will that even work?
 
-![Screenshot of challenge text](assets/Natas1_source.png)
+![Screenshot of challenge text](/Assets/Natas1_source.png)
 
 Yes, apparently I can.
 
