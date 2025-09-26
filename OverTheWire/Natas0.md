@@ -18,6 +18,7 @@ We are presented with a message upon first logging onto the site:
 ## Step 2: Exploit / Solution
 
 There isn't anywhere obvious to interact on this screen. This is also an introductory challenge, so I imagine the answer is somewhere *close*.
+
 What happens if we view the source code? Any hints or tips of where to look next?
 
 ![Screenshot of source code](/Assets/Natas0_source.png)
