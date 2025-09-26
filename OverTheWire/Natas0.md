@@ -11,18 +11,20 @@ We have been provided the initial username and password for the first challenge:
 
 We are presented with a message upon first logging onto the site:
 
-![Screenshot of challenge text](assets/Natas0.png)
+![Screenshot of challenge text](/Assets/Natas0.png)
 
 ---
 
 ## Step 2: Exploit / Solution
 
-	There isn't anywhere obvious to interact on this screen. This is also an introductory challenge, so I imagine the answer is somewhere *close*.
-	What happens if we view the source code? Any hints or tips of where to look next?
+There isn't anywhere obvious to interact on this screen. This is also an introductory challenge, so I imagine the answer is somewhere *close*.
 
-![Screenshot of source code](assets/Natas0_source.png)
+What happens if we view the source code? Any hints or tips of where to look next?
 
-	Well, that was a bit easier than expected. With the password in hand, onto the next level!
+![Screenshot of source code](/Assets/Natas0_source.png)
+
+Well, that was a bit easier than expected. With the password in hand, onto the next level!
+
 ---
 
 ## Step 3: Lessons Learned
