@@ -3,8 +3,8 @@
 Welcome! This repository contains detailed walkthroughs of HackTheBox and OverTheWire challenges I've completed, documenting techniques, learnings, and step-by-step exploits.
 
 ## Platforms
-- [HackTheBox](https://www.hackthebox.com)
-- [OverTheWire](https://overthewire.org)
+- [HackTheBox](https://www.hackthebox.com/)
+- [OverTheWire](https://overthewire.org/)
 
 ## About
 These write-ups demonstrate:
