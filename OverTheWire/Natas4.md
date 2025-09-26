@@ -9,7 +9,7 @@
 ## Step 1: Recon / Information Gathering
 As with most (if not all) of these challenges, we are presented with a cryptic clue. This one is a bit better than others, but it admittedly took me a moment to understand what was being expected.
 
-![Screenshot of challenge text](/Assets/Natas4.png)
+![Screenshot of challenge text](/Assets/natas4.png)
 
 ---
 
@@ -23,15 +23,15 @@ Well, I get to start using one of my personal favorite tools: BurpSuite. This to
 
 For this challenge, let's just intercept a request and see what we can find. I'll assume you know how to route traffic from your browser to Burp Proxy, but if not there is a lot of documentation online for setting this up. 
 
-![Screenshot of request](/Assets/Natas4_request.png)
+![Screenshot of request](/Assets/natas4_request.png)
 
 So even here there isn't much to be seen. Maybe that is itself a clue; there isn't a referer header either. I feel like this is a long shot, but that it's also what we are being told to do. So what happens if I insert a referer header here:
 
-![Screenshot of challenge text](/Assets/Natas4_referer.png)
+![Screenshot of challenge text](/Assets/natas4_referer.png)
 
 Now let's send the request. 
 
-![Screenshot of challenge text](/Assets/Natas4_reveal.png)
+![Screenshot of challenge text](/Assets/natas4_reveal.png)
 
 Wow, that actually worked! That was a fun challenge; I'm curious to see how the next ones ramp up.
 
