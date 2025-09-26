@@ -28,7 +28,7 @@ Well, that was a bit easier than expected. With the password in hand, onto the n
 ---
 
 ## Step 3: Lessons Learned
-- Be careful what secrets are kept in source code. Better yet, don't keep secrets in your source code.  
+- Secrets should never be stored in client-side code or web pages, because anything sent to the browser can be inspected by the user.  
 
 
 ---
