@@ -24,6 +24,7 @@ What happens if we view the source code? Any hints or tips of where to look next
 ![Screenshot of source code](/Assets/Natas0_source.png)
 
 Well, that was a bit easier than expected. With the password in hand, onto the next level!
+
 ---
 
 ## Step 3: Lessons Learned
