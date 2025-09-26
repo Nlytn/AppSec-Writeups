@@ -26,7 +26,7 @@ Yes, apparently I can.
 
 ## Step 3: Lessons Learned
 - Seriously, don't keep secrets in your source code.  
-- There are many ways to slice an onion. If the source code is accessible, then even a shocking amount of information can be gleaned.  
+- There are many ways to slice an onion. If the source code is accessible, then a shocking amount of information can be gleaned.  
 
 ---
 
