@@ -38,8 +38,7 @@ It looks like there is another users file. Open that file to get the password fo
 ---
 
 ## Step 3: Lessons Learned
-- Value of source code and comments  
-- Path traversal  
+- Client-facing configuration files (like robots.txt) are not secure storage — they’re hints for crawlers, not an access-control mechanism.
 
 
 ---
