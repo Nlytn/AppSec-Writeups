@@ -55,4 +55,4 @@ That was a windy, twisty path. But it was a fun one. Now we have our next passwo
 ---
 
 ## References
-- [Link to the challenge](http://natas2.natas.labs.overthewire.org)  
+- [Link to the challenge](https://overthewire.org/wargames/natas/natas0.html)  

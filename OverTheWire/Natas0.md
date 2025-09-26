@@ -34,4 +34,4 @@ Well, that was a bit easier than expected. With the password in hand, onto the n
 ---
 
 ## References
-- [Link to the challenge](http://natas0.natas.labs.overthewire.org/)
+- [Link to the challenge](https://overthewire.org/wargames/natas/natas0.html)

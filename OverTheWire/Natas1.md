@@ -31,4 +31,4 @@ Yes, apparently I can.
 ---
 
 ## References
-- [Link to the challenge](http://natas1.natas.labs.overthewire.org/)   
+- [Link to the challenge](https://overthewire.org/wargames/natas/natas1.html)   
