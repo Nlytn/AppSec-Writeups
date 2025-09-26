@@ -25,8 +25,7 @@ Yes, apparently I can.
 ---
 
 ## Step 3: Lessons Learned
-- Seriously, don't keep secrets in your source code.  
-- There are many ways to slice an onion. If the source code is accessible, then a shocking amount of information can be gleaned.  
+- Client-side restrictions (like disabling right-click) cannot enforce security; users can still access the underlying data through the browser or developer tools.  
 
 ---
 
