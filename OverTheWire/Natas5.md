@@ -29,7 +29,7 @@ Here's something curious that just occurred to me. It explicitly says I cannot l
 
 See? It really does say that; I didn't make it up. But what is it talking about? There isn't even a place for me to attempt to log in? I would normally lean towards SQLi, but where? 
 
-This took a little time to think on, but when the answer hit me I almost fell over. You know what we haven't tried yet? I wonder what the intercepted request will show us?
+This took a little time to think on, but when the answer hit me I almost fell over. You know what we haven't tried yet? I wonder what the intercepted request will show us...
 
 ![Screenshot of burp request](/Assets/Natas5_burp.png)
 
