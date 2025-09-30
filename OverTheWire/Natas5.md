@@ -51,5 +51,5 @@ Well would ya look at that? It actually worked! So by changing one paramater mid
 ---
 
 ## References
-- [Link to the challenge](http://natas5.natas.labs.overthewire.org/)  
+- [Link to the challenge](https://overthewire.org/wargames/natas/natas5.html)  
 - [Burp Repeater Documenation](https://portswigger.net/burp/documentation/desktop/tools/repeater)
