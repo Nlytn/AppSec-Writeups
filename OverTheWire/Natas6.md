@@ -22,7 +22,15 @@ Oh, I like this one. There is a nice input field and everything. The URL, like m
 
 To explain the methodology here, we are trying to log into the app using only the admin username. This assumes: 1) there is a username titled "admin" (while we cannot be sure, this is a safe bet to start with), and 2) There is no input sanitization, which allows us to skip the password altogether. 
 
-So when we input 'admin--, the server processes the query as SELECT * FROM members WHERE username = 'admin'-- AND password = 'password'. Notice the -- before "AND password..." The "--" is a comment to remove the rest of the query; the quote at the end of admin closes the query. So in reality, what we are telling the server is "SELECT * FROM members WHERE username = admin". I'm sure you can determine why it would really not be a good idea to let just anyone log in with an admin account. But alas, this is not the real world (thankfully), so there is a chance it will work here. (Don't tell anyone, but sometimes there is a chance this works in the real world too. Shhhhh!)
+So when we input 'admin--, the server processes the query 
+
+    SELECT * FROM members WHERE username = 'admin'-- AND password = 'password'. 
+
+Notice the -- before "AND password..." The "--" is a comment to remove the rest of the query; the quote at the end of admin closes the query. So in reality, what we are telling the server is
+
+    "SELECT * FROM members WHERE username = admin". 
+
+I'm sure you can determine why it would really not be a good idea to let just anyone log in with an admin account. But alas, this is not the real world (thankfully), so there is a chance it will work here. (Don't tell anyone, but sometimes there is a chance this works in the real world too. Shhhhh!)
 
 So let's try this here; it's worth a shot, right? 
 
