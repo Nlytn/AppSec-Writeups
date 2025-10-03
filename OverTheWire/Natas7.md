@@ -1,8 +1,8 @@
 # [OverTheWire] - [Natas7]
 
 **Date:** 2025  
-**Difficulty:** Easy
-**Objective:** Find the password for the next challenge.
+**Difficulty:** Easy  
+**Objective:** Find the password for the next level.
 
 ---
 
