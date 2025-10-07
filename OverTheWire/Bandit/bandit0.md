@@ -1,7 +1,7 @@
 # [OverTheWire] - [Bandit0]
 
 **Date:** 10/7/2025  
-**Difficulty:** Easy
+**Difficulty:** Easy  
 **Objective:** Log into the game using SSH.
 
 ---
