@@ -9,6 +9,8 @@
 ## Step 1: Recon / Information Gathering
 This first level is relatively simple. We need to login to the game via SSH (Secure Shell). 
 
+Secure Shell is a technology that allows secure remote connections. This allows secure communication and file transfer employing robust security mechanisms for safety. As long as the service is installed on both sides, you should be able to connect with either a password, 
+
 ![Screenshot of challenge text](/Assets/bandit0.png)
 
 So once we login, we can get the next level password and really start crackin'. That sounds like a plan. Before we proceed, do you know how to login via ssh?
@@ -34,7 +36,7 @@ So now let's reference the rest of the challenge to see where to go next. Accord
 
 ![Screenshot of home directory contents](/Assets/bandit0_home.png)
 
-Nice! So from here, let's open the file and get that password. We have two options (really there are more, but these are the two I default to): *cat* and *nano*. There isn't a wrong answer between these or others, but since we just need to read I"m going to use *cat*:
+Nice! So from here, let's open the file and get that password. We have two options (really there are more, but these are the two I default to): *cat* and *nano*. There isn't a wrong answer between these or others, but since we just need to read I'm going to use *cat*:
 
 ![Screenshot of home readme contents](/Assets/bandit0_cat.png)
 
