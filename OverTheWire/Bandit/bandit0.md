@@ -9,7 +9,7 @@
 ## Step 1: Recon / Information Gathering
 This first level is relatively simple. We need to login to the game via SSH (Secure Shell). 
 
-Secure Shell is a technology that allows secure remote connections. This allows secure communication and file transfer employing robust security mechanisms for safety. As long as the service is installed on both sides, you should be able to connect with either a password, 
+Secure Shell is a technology that allows secure remote connections. This allows secure communication and file transfer employing robust security mechanisms for safety. As long as the service is installed on both sides, you should be able to connect with either a password, passphrase or SSH key.
 
 ![Screenshot of challenge text](/Assets/bandit0.png)
 
