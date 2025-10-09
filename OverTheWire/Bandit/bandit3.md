@@ -9,7 +9,7 @@
 ## Step 1: Recon / Information Gathering
 This challenge is similar to the one before. We have a specified file, listed in our home directory, and we are charged with reading that file for the password to the next challenge. Simple enough, right?
 
-![Screenshot of challenge text](/Assets/bandit3.png)
+![Screenshot of challenge text](/Assets/Bandit3.png)
 
 ---
 
