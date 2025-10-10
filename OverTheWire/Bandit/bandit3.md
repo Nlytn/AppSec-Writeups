@@ -9,7 +9,7 @@
 ## Step 1: Recon / Information Gathering
 As with the previous challenges, we need to connect to Bandit3 over ssh. Then we can start some enumeration and get our bearings.
 
-![Screenshot of challenge text](/Assets/bandit3_ls.png)
+![Screenshot of challenge text](/Assets/band3_chall.png)
 
 ---
 
