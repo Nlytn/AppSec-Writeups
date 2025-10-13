@@ -9,18 +9,18 @@
 ## Step 1: Recon / Information Gathering
 As with the previous challenges, we need to connect to Bandit3 over ssh. Then we can start some enumeration and get our bearings.
 
-![Screenshot of challenge text](/Assets/band3_chall.png)
+![Screenshot of challenge text](/Assets/bandit4.png)
 
 ---
 
 ## Step 2: Exploit / Solution
 Let's run a ls command and see what is listed in the home directory:
 
-![Screenshot of home directory](/Assets/bandit3_ls.png)
+![Screenshot of home directory](/Assets/bandit4_ls.png)
 
 Okay, simple enough. We have a directory listed here, called "inhere". So far that's about what we were told, so let's see what's in the directory.
 
-![Screenshot of home directory](/Assets/bandit3_ls.png)
+![Screenshot of home directory](/Assets/bandit4_ls.png)
 
 I'm going to drop a little more context for us here. Running your standard list (ls) command doesn't work here. That's because the file is hidden. Once we run ls with the operands -la then we can see the hidden file. 
 
@@ -31,7 +31,7 @@ Technically you only need the -a switch, but I prefer to use both to get more in
 
 Now we can just cat the file to get the next level password. 
 
-![Screenshot of home directory](/Assets/bandit3_file_contents.png)
+![Screenshot of home directory](/Assets/bandit_file_contents.png)
 
 
 ---
