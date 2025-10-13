@@ -31,7 +31,7 @@ Technically you only need the -a switch, but I prefer to use both to get more in
 
 Now we can just cat the file to get the next level password. 
 
-![Screenshot of home directory](/Assets/bandit_file_contents.png)
+![Screenshot of home directory](/Assets/bandit4_file_contents.png)
 
 
 ---
