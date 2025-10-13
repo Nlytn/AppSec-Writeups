@@ -62,7 +62,7 @@ What's that? Is there an "ASCII text" file in the list? Well, you know what we h
 
 ![Screenshot of challenge text](/Assets/bandit5_cat.png)
 
-#### YES!! We got it! I feel like the difficulty ramp is slowly becoming a wall. Well, I'm glad I'm good at climbing.  
+YES!! We got it! I feel like the difficulty ramp is slowly becoming a wall. Well, I'm glad I'm good at climbing.  
 
 ---
 
