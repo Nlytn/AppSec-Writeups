@@ -1,6 +1,6 @@
-# :puzzle_piece: Bandit5 – “Human-Readable in a Sea of Noise”
+# :trident: Bandit5 – “Human-Readable in a Sea of Noise”
 
-## :bullseye: Objective  
+## :dart: Objective  
 Find the only **human-readable file** hidden within a massive directory full of random data.
 
 ---
