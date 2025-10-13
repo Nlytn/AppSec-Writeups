@@ -1,4 +1,4 @@
-# [OverTheWire] - [Bandit0]
+# [OverTheWire] - [Bandit1]
 
 **Date:** 10/7/2025  
 **Difficulty:** Easy  
@@ -32,13 +32,17 @@ So in our case, its as simple as:
 ![Screenshot of login terminal](/Assets/bandit0_login.png)
 ![Screenshot of password prompt](/Assets/bandit0_password.png)
 
-So now let's reference the rest of the challenge to see where to go next. According to the challenge, the password is in a "readme" in the home directory. Let's start by listing the home directory contents. We can do this by running an *ls* command:
+So now let's reference the rest of the challenge to see where to go next. 
 
-![Screenshot of home directory contents](/Assets/bandit0_home.png)
+![Screenshot of password prompt](/Assets/Bandit1.png)
+
+According to the challenge, the password is in a "readme" in the home directory. Let's start by listing the home directory contents. We can do this by running an *ls* command:
+
+![Screenshot of home directory contents](/Assets/bandit1_home.png)
 
 Nice! So from here, let's open the file and get that password. We have two options (really there are more, but these are the two I default to): *cat* and *nano*. There isn't a wrong answer between these or others, but since we just need to read I'm going to use *cat*:
 
-![Screenshot of home readme contents](/Assets/bandit0_cat.png)
+![Screenshot of home readme contents](/Assets/bandit1_cat.png)
 
 And there's the password. Let's grab that, save it, and move on to the next level. Make sure you terminate your existing SSH connection before moving on. 
 

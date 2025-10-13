@@ -1,4 +1,4 @@
-# [OverTheWire] - [Bandit3]
+# [OverTheWire] - [Bandit4]
 
 **Date:** 2025-10-10  
 **Difficulty:** Easy   
