@@ -91,4 +91,5 @@ file is one of those underappreciated Linux utilities that teaches you to look i
 
 ## :recycle: Notes
 Completed: October 13, 2025  
-Challenge: Bandit5
+Challenge: Bandit5   
+Link to challenge: https://overthewire.org/wargames/bandit/bandit5.html
