@@ -1,42 +1,59 @@
 # [OverTheWire] - [Bandit1]
 
-**Date:** 10/9/2025  
+**Date:** 10/7/2025  
 **Difficulty:** Easy  
-**Objective:** The password for the next level is stored in a file called - located in the home directory
+**Objective:** Log into the game using SSH.
 
 ---
 
 ## Step 1: Recon / Information Gathering
-Since we have the password from the previous challenge, we can ssh to the same host using the new username/password combination. To see how to connect via SSH, refer to my previous post: ![Bandit0 Walkthrough](/bandit0.md) 
+This first level is relatively simple. We need to login to the game via SSH (Secure Shell). 
 
-![Screenshot of challenge text](/Assets/bandit1.png)
+Secure Shell is a technology that allows secure remote connections. This allows secure communication and file transfer employing robust security mechanisms for safety. As long as the service is installed on both sides, you should be able to connect with either a password, passphrase or SSH key.
+
+![Screenshot of challenge text](/Assets/bandit0.png)
+
+So once we login, we can get the next level password and really start crackin'. That sounds like a plan. Before we proceed, do you know how to login via ssh?
 
 ---
 
 ## Step 2: Exploit / Solution
-Now that we've logged in, let's check the home directory. Let's once more run a list command to figure out what is in the home directory.
 
-![Screenshot of list contents](/Assets/bandit1_ls.png)
+Logging in via SSH is relatively simple, especially given that we already have the username/password combo for the challenge. 
 
-Okay, there it is. One simple filed named - . That should be simple enough to open, right? So let's try to cat this file and get that password:
+Logging in via ssh is as simple as this:
 
-![Screenshot of reading file](/Assets/bandit1_cat1.png)
+	ssh -p <port number> <username>@<hostname or IP address>
 
-Since a screenshot doesn't show a time lapse very well, rest assured I waited for a solid 2-3 minutes at this screen with no improvement. It looks like it may have frozen. So let's dig a little deeper into this.
+So in our case, its as simple as:
 
-I had to search around to find an answer on how to open this file. I'm sure there is a reason why someone would name their file starting with a hyphen, but those reasons escape me currently. It took a little searching, but apparently we can open the file with a small syncatical change:
+	ssh -p 2220 bandit0@bandit.labs.overthewire.org
 
-![Screenshot of reading file](/Assets/bandit1_cat2.png)
+![Screenshot of login terminal](/Assets/bandit0_login.png)
+![Screenshot of password prompt](/Assets/bandit0_password.png)
 
-When a file begins with special characters, the best way is to specify the absolute path to the file. 
+So now let's reference the rest of the challenge to see where to go next. 
+
+![Screenshot of password prompt](/Assets/bandit1.png)
+
+According to the challenge, the password is in a "readme" in the home directory. Let's start by listing the home directory contents. We can do this by running an *ls* command:
+
+![Screenshot of home directory contents](/Assets/bandit1_home.png)
+
+Nice! So from here, let's open the file and get that password. We have two options (really there are more, but these are the two I default to): *cat* and *nano*. There isn't a wrong answer between these or others, but since we just need to read I'm going to use *cat*:
+
+![Screenshot of home readme contents](/Assets/bandit1_cat.png)
+
+And there's the password. Let's grab that, save it, and move on to the next level. Make sure you terminate your existing SSH connection before moving on. 
 
 ---
 
 ## Step 3: Lessons Learned
-- How to open file with unconventional naming convention  
+- How to properly SSH to a remote host on an alternate port using password authentication 
+
 
 ---
 
 ## References
-- [Link to the challenge](https://overthewire.org/wargames/bandit/bandit2.html)  
-- [Link to forum post detailing how to open file](https://serverfault.com/questions/124659/how-can-i-open-a-file-whose-name-starts-with)
+- [Link to the challenge](https://overthewire.org/wargames/bandit/bandit0.html)  
+- [SSH Documentation](https://www.ssh.com/academy/ssh/command)
