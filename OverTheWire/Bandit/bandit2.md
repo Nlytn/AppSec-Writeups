@@ -9,7 +9,7 @@
 ## Step 1: Recon / Information Gathering
 Since we have the password from the previous challenge, we can ssh to the same host using the new username/password combination. To see how to connect via SSH, refer to my previous post: ![Bandit0 Walkthrough](/bandit0.md) 
 
-![Screenshot of challenge text](/Assets/bandit2.png)
+![Screenshot of challenge text](/Assets/Bandit2.png)
 
 ---
 
