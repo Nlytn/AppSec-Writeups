@@ -34,7 +34,7 @@ So in our case, its as simple as:
 
 So now let's reference the rest of the challenge to see where to go next. 
 
-![Screenshot of password prompt](/Assets/Bandit1.png)
+![Screenshot of password prompt](/Assets/bandit1.png)
 
 According to the challenge, the password is in a "readme" in the home directory. Let's start by listing the home directory contents. We can do this by running an *ls* command:
 
