@@ -21,28 +21,29 @@ Let’s check what we’re dealing with:
 
 ```bash
 ls -la
-du -sh ./*
 ```
 
-You’ll quickly realize there are thousands of small files. Searching one by one isn’t realistic — we need to automate.
+![Screenshot of list directory contents](/Assets/bandit5_ls.png)
+
+You'll quickly see there are only nine files, which is to our benefit. However, it would still be in our interest to find a way to automate this process.
 
 ## :two: Filtering Candidates
 
 We know the goal: find the human-readable file. Linux has a command that identifies file content based on internal structure rather than file extension — file.
 
-To apply it to every file in the directory, we can combine it with find:
+There are many ways to slice a melon (as the less graphic version of the saying goes). If you look around you will find various ways to apply the file command to the whole directory. I, for one, prefer to use the simplest possible method available:
 
 ```bash
-find . -type f -exec file {} + | grep text
+file inhere/*
 ```
 
 Explanation:
 
-* find . -type f — locate all regular files
+* file -> for each file specified, shows information on what type of file it is
 
-* -exec file {} + — run file on each file found
+*  inhere/* -> all files in the inhere directory. The wildcard (\*) says to grab everything after the slash. 
 
-* grep text — filter for files the file command identifies as text
+![Screenshot of challenge text](/Assets/bandit5_file.png)
 
 ## :three: Identifying the Target
 
@@ -52,7 +53,7 @@ A quick cat confirms it contains the next password.
 ```bash
 cat ./maybe-this-one
 ```
-(Insert screenshot of command output here for visual clarity.)
+![Screenshot of challenge text](/Assets/bandit5_cat.png)
 
 ## :brain: Understanding the Technique
 
@@ -77,8 +78,7 @@ File inspection tools like file or mimetype are vital for safe file-handling log
 
 ```bash
 ls -la
-du -sh ./*
-find . -type f -exec file {} + | grep text
+file inhere/*
 cat ./maybe-this-one
 ```
 
@@ -90,5 +90,5 @@ file is one of those underappreciated Linux utilities that teaches you to look i
 :thought_balloon: Have you ever found an odd or misleading file type on a real system? Drop your favorite file or find trick below — I’d love to hear your approach.
 
 ## :recycle: Notes
-Completed: 
-Challenge: 
+Completed: October 13, 2025
+Challenge: Bandit5
