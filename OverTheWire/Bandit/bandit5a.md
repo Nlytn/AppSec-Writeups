@@ -90,5 +90,5 @@ file is one of those underappreciated Linux utilities that teaches you to look i
 :thought_balloon: Have you ever found an odd or misleading file type on a real system? Drop your favorite file or find trick below — I’d love to hear your approach.
 
 ## :recycle: Notes
-Completed: October 13, 2025
+Completed: October 13, 2025 
 Challenge: Bandit5
