@@ -1,4 +1,4 @@
-# [OverTheWire] - [Bandit2]
+# [OverTheWire] - [Bandit3]
 
 **Date:** 2025-10-09  
 **Difficulty:** Easy   
@@ -9,18 +9,18 @@
 ## Step 1: Recon / Information Gathering
 This challenge is similar to the one before. We have a specified file, listed in our home directory, and we are charged with reading that file for the password to the next challenge. Simple enough, right?
 
-![Screenshot of challenge text](/Assets/Bandit2.png)
+![Screenshot of challenge text](/Assets/bandit3.png)
 
 ---
 
 ## Step 2: Exploit / Solution
 So far it's pretty standard. Let's just run a ls command to see what's actually here:
 
-![Screenshot of challenge text](/Assets/bandit2_ls.png)
+![Screenshot of challenge text](/Assets/bandit3_ls.png)
 
 So let's try to cat the file like we did before: 
 
-![Screenshot of first cat attempt](/Assets/bandit2_cat1.png)
+![Screenshot of first cat attempt](/Assets/bandit3_cat1.png)
 
 So as you can see from the above screenshot, this took me a moment to figure out. Apparently this is not the same as the last challenge. I thought since the last challenge consisted of opening a file labeled with just a hyphen, that this challenge was naturally a progression of this logic. Well, I was close but that's not quite the case.
 
@@ -34,7 +34,7 @@ So where does this leave us? How does one recoup a file that was given an ill na
 
 We're going to throw on some more hyphens. Two, to be exact. When we put them in the right place, we are telling cat to process the rest as raw input, not as an operand. So, let's try it out (and remember not to typo like I did at first):
 
-![Screenshot of successful cat attempt](/Assets/bandit2_cat2.png)
+![Screenshot of successful cat attempt](/Assets/bandit3_cat2.png)
 
 ---
 
