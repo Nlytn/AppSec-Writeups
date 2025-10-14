@@ -42,7 +42,9 @@ find ./ -type f -size 1033c
 
 Explanation:
 
-* find ./ -type f — locate all regular files in current directory
+* find ./ — search in current directory
+
+* -type f — locate all regular files 
 
 * -size 1033c — file must be 1033 bytes in size
 
