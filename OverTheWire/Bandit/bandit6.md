@@ -86,5 +86,5 @@ This level reminded me that sometimes brute-force searching is about using the r
 :thought_balloon: Have you ever found yourself in a position where you spent too long looking for something only to find a simpler solution after the fact? We've all been there. Share an instance you've experienced — let's embrace the catharsis together.
 
 ## :recycle: Notes
-Completed: 10.14.2025
+Completed: 10.14.2025   
 Challenge: https://overthewire.org/wargames/bandit/bandit6.html
