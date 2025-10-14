@@ -31,7 +31,7 @@ Much like the last challenge, there are just too many files to check manually. R
 
 We know the goal: find the human-readable file. Though we have more files to check, we also have more context: the file also must be 1033 bytes in size, and it must not be executable. It looks like we get to use a new command (and one of my personal favorites): `find`. 
 
-Due to the intrinsic nature of `find`, :
+Due to the intrinsic nature of `find`, the command will automatically search a full directory. Therefore part of the command is specifying the directory to run in; it won't automatically run in the current directory. I've failed this command enough times to remember this :
 
 ```bash
 find ./ -type f -size 1033c
