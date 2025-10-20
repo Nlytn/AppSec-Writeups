@@ -1,4 +1,4 @@
-# :trident: Bandit7 – “Broken Paths, Open Files: The Trick Behind Bandit7”
+# :trident: “Broken Paths, Open Files: The Trick Behind Bandit7”
 
 ## :dart: Objective  
 Find the only file of a specified size that is owned by *user* bandit7 **and** owned by *group* bandit6. The file can be located anywhere within the filesystem. 
