@@ -64,7 +64,7 @@ find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
 
 * 2 — Specifies standard errors (stderr)
 
-* > — operand to route specified output
+* `>` — operand to route specified output
 
 * /dev/null — null device to send output to
 
