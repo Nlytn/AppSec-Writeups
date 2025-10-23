@@ -58,7 +58,7 @@ Better yet, we could leverage another command line tool to do the work for us: `
 sort data.txt
 ```
 
-| ![output of sort](/Assets/bandit9_sort.png) |
+| ![output of sort](/Assets/Bandit9_sort.png) |
 |:--:|
 | * Output of `sort` command * |
 
