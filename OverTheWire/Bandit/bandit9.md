@@ -81,6 +81,7 @@ sort data.txt | uniq -u
 This is a powerful technique that can be leveraged in a number of scenarios. This is not limited to text files; if you have a command that is outputting information which you need to sort, you can leverage `sort` and `uniq` to parse this data more effectively. This can save time and effort and further eliminate mistakes. 
 
 [Documentation for sort](https://man7.org/linux/man-pages/man1/sort.1.html)
+
 [Documentation for uniq](https://man7.org/linux/man-pages/man1/uniq.1.html)
 
 
