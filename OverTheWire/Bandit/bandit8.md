@@ -110,4 +110,4 @@ Have you run into a situation where you needed to find a hay in a needle stack? 
 
 ## :recycle: Notes
 Completed: 10.20.2025   
-Challenge: https://overthewire.org/wargames/bandit/bandit7.html
+Challenge: https://overthewire.org/wargames/bandit/bandit8.html
