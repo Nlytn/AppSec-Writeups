@@ -46,13 +46,13 @@ cat data.txt
 | * Output of ridiculous cat output * |
 
 
-That's what I'm talking about! Now this is a challenge. If I'm being honest, I was going to be really bummed if I was presented with something like ten lines. 
+That's what I'm talking about! Now this is a challenge! If I'm being honest, I was going to be really bummed if I was presented with something like ten lines. 
 
 ## :three: Work Smart - Searching the file
 
 So let's crack our knuckles and start going through this file. Who doesn't want to spend hours searching for the unique line, mixed in with duplicates, that could easily be overlooked?
 
-Or we could leverage another command line tool to do the work for us: `sort`. I can appreciate the "on the nose" naming convention Linux tends to employ. This tool does exactly what it says: it sorts the output and groups duplicates together. Let's try this out and see how this works:
+Better yet, we could leverage another command line tool to do the work for us: `sort`. I can appreciate the "on the nose" naming convention Linux tends to employ. This tool does exactly what it says: it sorts the output and groups duplicates together. Let's try this out and see how this works:
 
 ```bash
 sort data.txt
@@ -62,7 +62,7 @@ sort data.txt
 |:--:|
 | * Output of `sort` command * |
 
-That really didn't help as much as I hoped. It's about equivalent to just `cat`ing the file. We need to pipe this output to another command that will pull the unique line(s) from the file. This is where `uniq` comes into play. 
+That really didn't help as much as I hoped. It's about equivalent to just `cat`ing the file. We need to pipe this output to another command that will pull the unique line(s) from the file. This is where `uniq` comes into play. We are going to take the output from `sort` and send it to `uniq`. Then, and only then, will the *unique* output be returned to us. `uniq` works by checking the adjacent lines for duplicates and removing any found, therefore the file must be `sort`ed prior to running `uniq`. 
 
 ```bash
 sort data.txt | uniq -u
