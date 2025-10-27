@@ -106,7 +106,7 @@ By leveraging `strings`, we were able to find a human readable text within a wal
 
 [Documentation for strings](https://linux.die.net/man/1/strings)
 
-[Documentation for uniq](https://man7.org/linux/man-pages/man1/grep.1.html)
+[Documentation for grep](https://man7.org/linux/man-pages/man1/grep.1.html)
 
 
 ## :lock: Security Takeaway
@@ -133,5 +133,5 @@ These challenges are getting trickier but also more fun. So far, we've experienc
 Searching is a powerful feature that can be implemented in a number of ways depending on the scenario. Have you faced a situation where you had to find something (a file, text within a file, etc) in a sea of noise while quickly running out of time? How did you maximize your efficiency to get the job done? I would love to hear your war stories and successes! 
 
 ## :recycle: Notes
-Completed: 10.23.2025   
-Challenge: https://overthewire.org/wargames/bandit/bandit9.html
+Completed: 10.24.2025   
+Challenge: https://overthewire.org/wargames/bandit/bandit10.html
