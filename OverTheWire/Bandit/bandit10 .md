@@ -74,7 +74,7 @@ Linux has a tool, aptly named `strings`. This tool will (as you may expect) pull
 strings data.txt
 ```
 
-| ![output of sort](/Assets/Bandit10_strings.png) |
+| ![output of strings](/Assets/bandit10_strings.png) |
 |:--:|
 | * Output of `strings` command * |
 
@@ -86,7 +86,7 @@ What if we combined this with the power of `grep`. Stay with me now. We know the
 strings data.txt | grep ===
 ```
 
-| ![output of sort](/Assets/Bandit10_strings_grep.png) |
+| ![output of strings piped through grep](/Assets/bandit10_strings_grep.png) |
 |:--:|
 | * Output of `strings` command piped through `grep` * |
 
