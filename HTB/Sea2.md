@@ -58,7 +58,6 @@ Personally, I want to check out the web server to see if we can find anything in
 
 ![Screenshot of ffuf command](/Assets/HtB/Sea/ffuf_1.png)
 ![Screenshot of ffuf command](/Assets/HtB/Sea/ffuf_2.png)
-![Screenshot of ffuf command](/Assets/HtB/Sea/ffuf_3.png)
 
 The thing with ffuf is that it takes time, and it can be rather hit or miss. Fortunately, through this process I've learned some handy wordlists to incorporate into later tests, all of which are included within seclists:
 
@@ -123,7 +122,7 @@ So the script provided a new file: xss.js. It also provides a link to submit to 
 
 Let's go back to that "Contact" form and check it out again. There is a link for us to include a URL (presumably to a website, i.e. LinkedIn or Github), but we may be able to leverage this to our use. Fill out the form and input the URL provided by the script:
 
-![Screenshot of Contact Form - Filled with XSS](/Assets/HtB/Sea/contact_form_filled.png)
+![Screenshot of Contact Form - Filled with XSS](/Assets/HtB/Sea/Contact_form_filled.png)
 
 Wait for a few moments, and we get...no shell. So it's not connecting to our listener for some reason. Taking a look at the exploit code shows some clues. Look at the below line:
 
