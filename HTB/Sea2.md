@@ -1,4 +1,4 @@
-# :trident: [Machine Name] – [Difficulty]
+# :trident: [Sea] – [Easy]
 
 ## :aerial_tramway: Attack Path Summary
 A short, high-level narrative of how the machine was compromised:
