@@ -244,7 +244,7 @@ Kali has a built-in hash identifier, but it can be rather hit or miss. For my pu
 
 Now that we know its bcrypt, we can employ hashcat to crack the password for us. We are going to need a couple of things: the password to crack and a wordlist to run against the password. Hashcat will iterate through the wordlist and hash every item in the same algorithm specified (in this case, bycrpt). Once it finds a match, it returns the original entry (from the wordlist) to us. There is no way to crack a hash, but you can theoretically cause a collision which will reveal the contents of the hash. (I used my host instead of the VM to trim some time)
 
-![Screenshot of cracked password](Assets/HtB/Sea/password_crack_final.png)
+![Screenshot of cracked password](/Assets/HtB/Sea/password_crack_final.png)
 
 Now that we have the password, we have to figure out who it's for. Let's just be simple about this: 
 
