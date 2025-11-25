@@ -125,4 +125,5 @@ Machine: https://app.hackthebox.com/machines/Cap
 This is another early box in a long series of learning experiences on HtB, and as such I am leaning heavily on the shoulders of giants in this industry. For this walkthrough, I had to reference IppSec quite a bit to gain full understanding of attack methods and how to abuse the underlying technologies. As this series goes forward my hope is to stand on my own two feet and, with a little bit of luck, maybe stand with these giants one day. Until that day comes, I believe in giving credit where it is due:
 
 [Link to IppSec walkthrough](https://youtu.be/O_z6o2xuvlw)
+
 [Link to 0xdf walkthrough](https://0xdf.gitlab.io/2021/10/02/htb-cap.html)
