@@ -1,4 +1,7 @@
-# :trident: [Cap] — [Easy]
+<p align="center">
+  <img src="Assets/HtB/Cap/cap_title_card.png" alt="Sea Machine Card" width="400">
+</p>
+
 
 ## :aerial_tramway: Attack Path Summary
 - Foothold through IDOR vulnerability  
