@@ -134,9 +134,6 @@ Grab root.txt and complete the challenge.
 ## :brain: Understanding the Technique
 This was an easy but interesting challenge. This is a case where security by obscurity is not efficient. With some simple enumeration we were able to gain access to a hidden, but not locked, directory. By viewing the unprotected README file on the server, we were able to determine the software type and version on the server. From here, we could leverage a publicly available exploit to gain a webshell; we then pivoted this to a full remote shell under our command. In this case, the web server was running as an established user instead of a webuser account, so we already achieved moderate elevation upon initial compromise. This user was allowed to run one seeminly innocuous program to monitor the health of the server. Unfortunately, this file was not properly secured and we were allowed to further edit the file and input another reverse shell. Since this script is able to be run as root by the user, executing the script also executed our remote shell request, sending a request that was received by our listener and granting full root access to the server. 
 
-## :lock: Security Takeaway
-One or two sentences showing real-world significance.
-
 ## :writing_hand: Final Thoughts
 This is number 2 out of, say, a million boxes I plan to complete. Yes, that's a bit hyperbolic, but I am lacking severely in my offensive testing and that bothers me. So if you bear with me, I can guarantee you'll start seeing some improvement both in my writing style and my actual skills. Here's to hoping I can provide some benefit to the industry I love so much and that has already made so many of my dreams come true.
 
