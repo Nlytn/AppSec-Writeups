@@ -31,37 +31,37 @@ As always, start with a simple nmap scan to see what we are up against here:
 
 Alright, so we are running two ports: port 22 (SSH) and port 80 (web server). It looks like the web server is a Linux box running an Apache web server. Navigating to port 80 in the browser shows a simple page. This is likely for testing the server's functionality, a simple PoC to demonstrate the server is alive. 
 
-[screenshot of hello world](/Assets/HtB/Nibbles/web_server_hello_world.png)
+![screenshot of hello world](/Assets/HtB/Nibbles/web_server_hello_world.png)
 
 There is no robots.txt file accessible, unfortunately. Running ffuf also doesn't return much for us at this point. However, I did just remember a basic step I overlooked altogether: review the source code.
 
-[screenshot of source code](/Assets/HtB/Nibbles/source_code.png)
+![screenshot of source code](/Assets/HtB/Nibbles/source_code.png)
 
 Finally, some movement. Let's check out this directory and see if it holds anything:
 
-[screenshot of blog page](/Assets/HtB/Nibbles/nibbleblog.png)
+![screenshot of blog page](/Assets/HtB/Nibbles/nibbleblog.png)
 
 So now we have a blog page, but there isn't a lot to be seen here. I navigated around the site for a bit, trying to enumerate users, directories, files, links, or anything of interest but I wasn't able to discover much here. Since we now have a new directory, though, let's try to run ffuf again and see if anything is returned:
 
-[screenshot of ffuf output](/Assets/HtB/Nibbles/ffuf_readme.png)
+![screenshot of ffuf output](/Assets/HtB/Nibbles/ffuf_readme.png)
 
 Check the README file to get some information on what technology we are running here:
 
-[screenshot of README](/Assets/HtB/Nibbles/curl_readme.png)
+![screenshot of README](/Assets/HtB/Nibbles/curl_readme.png)
 
 So we are running "nibbleblog", which appears to be an open source CMS. A quick Google search confirms as much with a link to a Github repo. After a bit of searching, I was able to locate CVE-2015-6967, a remote code execution available against Nibbleblog. Unfortunately, we need a valid username/password combination in order to exploit. If you review the ffuf output once more, you'll notice (if you haven't already) there is an admin.php path listed. Check it out:
 
-[screenshot of nibbleblog admin login](/Assets/HtB/Nibbles/nibble_admin.png)
+![screenshot of nibbleblog admin login](/Assets/HtB/Nibbles/nibble_admin.png)
 
 To preface this, we don't always get this lucky but maybe today is the day to buy that lottery ticket:
 
-[screenshot of Google results of default creds](/Assets/HtB/Nibbles/nibbles_default_creds.png)
+![screenshot of Google results of default creds](/Assets/HtB/Nibbles/nibbles_default_creds.png)
 
 
 ## :gear: User Privilege Escalation
 So once we login, it feels like hitting paydirt. We now have an option for new posts, which includes an option to upload files. At this point, I realized the PoC I downloaded from Github has some syntactical issues that, frankly, I don't want to fix if its not required. So I looked online again and found a different, working PoC to attempt the exploit. This exploit is included in Metasploit, but I would prefer to do this manually to fully understand the chain. However, I'm still going to use the reference included by Metasploit. There are multiple ways to come across this information, but I leveraged Exploit-DB:
 
-[screenshot of Exploit-DB](/Assets/HtB/Nibbles/exploit_db_rce.png)
+![screenshot of Exploit-DB](/Assets/HtB/Nibbles/exploit_db_rce.png)
 
 https://curesec.com/blog/article/blog/NibbleBlog-403-Code-Execution-47.html
 
@@ -78,7 +78,7 @@ What we need to do is upload a simple webshell that will allow us to run system 
 
 Now go to http://nibbles.htb/nibbleblog/content/private/plugins/my_image/image.php?cmd=whoami, and you will see the current webuser account name:
 
-[screenshot of whoami on webshell](/Assets/HtB/Nibbles/nibbles_whoami.png)
+![screenshot of whoami on webshell](/Assets/HtB/Nibbles/nibbles_whoami.png)
 
 Enumerating further is going to be tricky if we are in a webshell, so I'm going to bail on this and get a proper reverse shell. The easiest one for my use is with PentestMonkey (https://pentestmonkey.net/tools/web-shells/php-reverse-shell); just be sure you change your variables before uploading the script. Follow the same procedure as before, but set up a netcat listener to receive the incoming connection:
 
@@ -89,7 +89,7 @@ Go back to .../image.php and wait for the connection back to your listener. Now 
 ## :gear: Root Privilege Escalation
 Checking running processes, I'm not seeing anything of immediate interest. I do recall that this is an Apache server, so I'm going to try to check the configuration files to see if I can find anything of use.
 
-[screenshot of /etc/apache2/conf file](/Assets/HtB/Nibbles/apache_conf.png)
+![screenshot of /etc/apache2/conf file](/Assets/HtB/Nibbles/apache_conf.png)
 
 At this point, I realized I didnt enumerate the simplest things:
 
@@ -100,8 +100,8 @@ This is quite interesting. There is one thing we can run as sudo, but I have no 
 	unzip personal.zip
 	ls personal/stuff/monitor.sh
 
-[unzipping personal.zip](/Assets/HtB/Nibbles/unzipping_personal_zip.png)
-[monitor.sh output](/Assets/HtB/Nibbles/monitor_sh.png)
+![unzipping personal.zip](/Assets/HtB/Nibbles/unzipping_personal_zip.png)
+![monitor.sh output](/Assets/HtB/Nibbles/monitor_sh.png)
 
 I'm learning as I go here, but it looks like we need to install "monitor" by way of this script. At that point, we can run the "monitor" command as root. I'm guessing we can combine commands with monitor or otherwise abuse our privileges, but I'm going to have to work with this and see what happens.
 
@@ -126,8 +126,8 @@ You have to run the full path as sudo to gain elevated permissions
 
 	sudo /home/nibbler/personal/stuff/monitor.sh
 
-[running command](/Assets/HtB/Nibbles/running_command.png)
-[root access](/Assets/HtB/Nibbles/root_access.png)
+![running command](/Assets/HtB/Nibbles/running_command.png)
+![root access](/Assets/HtB/Nibbles/root_access.png)
 
 Grab root.txt and complete the challenge.
 
