@@ -1,4 +1,4 @@
-# :trident: [Nibbles] — [Easy]
+# :trident: [Cap] — [Easy]
 
 ## :aerial_tramway: Attack Path Summary
 - Foothold through IDOR vulnerability  
