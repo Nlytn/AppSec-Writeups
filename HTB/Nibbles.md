@@ -27,7 +27,7 @@ Nibble is an easy machine that is a bit shorter than most of the other challenge
 ## :gear: Initial Foothold
 As always, start with a simple nmap scan to see what we are up against here:
 
-[screnshot of nmap](/Assets/HtB/Nibbles/nmap.png)
+![screnshot of nmap](/Assets/HtB/Nibbles/nmap.png)
 
 Alright, so we are running two ports: port 22 (SSH) and port 80 (web server). It looks like the web server is a Linux box running an Apache web server. Navigating to port 80 in the browser shows a simple page. This is likely for testing the server's functionality, a simple PoC to demonstrate the server is alive. 
 
