@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../Assets/HtB/Cap/knife_title_card.png" alt="Cap Machine Card" width="400">
+  <img src="../Assets/HtB/Knife/knife_title_card.png" alt="Cap Machine Card" width="400">
 </p>
 
 ## :aerial_tramway: Attack Path Summary
