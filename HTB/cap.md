@@ -5,8 +5,8 @@
 
 ## :aerial_tramway: Attack Path Summary
 - Foothold through IDOR vulnerability  
-- Privilege escalation to user via plaintext username/password  
-- Root via cap_setuid misconfiguration 
+- Privilege escalation to user using plaintext credentials found in capture 
+- Root access via misconfigured cap_setuid capability on Python binary
 
 ## :dart: Objective
 Cap is an easy rated machine, and an introductory course to guided mode on HtB. We start with a simple web server hosting a scanning and monitoring service. Leveraging insecure functionality, we discover an IDOR vulnerability that we leverage to gain ultimately discover a username and password. Upon gaining access, we leverage a binary with loose permissions to elevate our access to root.
@@ -45,7 +45,7 @@ We are downloading /id/2, so if we change to /id/1, we get another capture. Howe
 
 ![screenshot of 0.pcap](/Assets/HtB/Cap/pcap0.png)
 
-There are likely more efficient ways to peform this task, but I quickly scrolled through the captures until I found something of interest. In this case, it was a prompt for a username, then another prompt for the password. On line 40 I found the password for nathan:
+After reviewing the capture, I found a prompt for a username, then another prompt for the password. On line 40 I found the password for nathan:
 
 ![screenshot of captured password](/Assets/HtB/Cap/captured_password.png)
 
@@ -73,7 +73,7 @@ Scrolling down a bit, I notice what appears to be the golden ticket:
 
 ![screenshot of linpeas results](/Assets/HtB/Cap/linpeas_results.png)
 
-A quick search returns a PoC for this exploit. Its a simple python script that will leverage polkit to add a new user with sudo privileges, so let's try it out. Since this is a HtB machine, it doesn't have external internet access. So we can download this exploit to our local machine, then set up a python web server to serve the file. From the remote (victim) machine, issue a wget back to our web server to get the python file:
+A quick search returns a PoC for this exploit. It's a simple python script that will leverage polkit to add a new user with sudo privileges, so let's try it out. Since this is a HtB machine, it doesn't have external internet access. So we can download this exploit to our local machine, then set up a python web server to serve the file. From the remote (victim) machine, issue a wget back to our web server to get the python file:
 
 ![screenshot of web server](/Assets/HtB/Cap/python_virtual_server.png)
 ![screenshot of exploit on server](/Assets/HtB/Cap/exploit_on_server.png)
@@ -84,7 +84,7 @@ Remember to give the script executable permissions:
 
 ![screenshot of exploit on server](/Assets/HtB/Cap/exploit_failed.png)
 
-It looks like linPEAS lied to us; this exploit isn't working due to invalid dependencies. I'll run linPEAS again. 
+It looks like linPEAS lied to us; this exploit is a false positive due to missing dependencies. I'll run linPEAS again. 
 
 Scrolling down to the "Capabilities" section, there is another highlight to check out. This one turns out to be more promising.
 
@@ -110,13 +110,13 @@ Let's set the uid to 0 in python, spawn a shell and get root.txt
 ![screenshot of new privesc](/Assets/HtB/Cap/privesc.png)
 
 ## :brain: Understanding the Technique
-After running an initial nmap scan, I discovered a web server running a scanning/monitoring service. Accessing this service allowed me to download a network packet capture file that showed all of my own traffic. By manipulating the URL, I was able to access what appears to be a master packet capture file. Since no safeguards were in place, I was able to download and review this file wherein I discovered a plaintext username/password combination. At this point I pivoted to other running services in an attempt to recycle the account information and successfully gained entry to the server. Running an imported binary (linPEAS), I was able to determine the cap_setuid capability was enabled on a Python binary but accessible to all users. By running this binary I was able to set user permissions to root, spawn a shell and access root.txt
+The initial foothold hinged on insecure direct object references—capabilities often overlooked in web applications. The packet capture leak allowed credential harvesting, and Linux capabilities (particularly cap_setuid) enabled privilege escalation without sudo. Misconfigured capabilities are powerful because they allow binaries to bypass typical privilege controls, even when sudo permissions are restricted.
 
 ## :lock: Security Takeaway
-One or two sentences showing real-world significance.
+Systems must enforce strict access control on generated files like packet captures, and Linux capabilities should only be assigned when absolutely necessary. A single misconfigured capability can completely undermine privilege boundaries.
 
 ## :writing_hand: Final Thoughts
-This is another challenge that continues to highlight my weaknesses. Enumeration continues to be a sticking point with me, as does privilege escalation. However, I'm learning new tricks and tools to grow my abilities. As the skills grow, so too does the momentum. 
+This challenge reinforced two of my biggest growth areas: enumeration and privilege escalation. I'm learning to slow down, validate findings, and think critically about what each tool is showing me. With each machine, my process becomes sharper, and I’m gaining confidence in identifying and exploiting real-world misconfigurations. 
 
 ## :recycle: Notes
 Completed: 2025-11-25  
